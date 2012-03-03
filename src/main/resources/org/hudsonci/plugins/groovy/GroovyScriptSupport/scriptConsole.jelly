@@ -1,0 +1,36 @@
+<!-- **************************************************************************
+#
+# Copyright  (c) 2012 Oracle Corporation.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#
+# Contributors: 
+#
+#  Winston Prakash
+#
+#************************************************************************** --> 
+
+
+<!--
+   Displays the editor window and the execution result.
+-->
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <t:scriptConsole> 
+         <!-- this is where the example goes -->
+        <j:if test="${node == 'master'}">
+            <pre>println(hudson.model.Hudson.instance.pluginManager.plugins)</pre>
+        </j:if>
+        
+        <j:if test="${node != 'master'}">
+            <pre>println System.getenv("PATH")</pre>
+            <p>
+                ${%This execution happens in the slave agent JVM.}
+            </p>
+        </j:if>
+            
+    </t:scriptConsole>
+     
+</j:jelly>
