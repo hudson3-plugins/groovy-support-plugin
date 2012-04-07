@@ -21,8 +21,8 @@ import groovy.lang.GroovyShell;
 import hudson.Extension;
 import java.io.PrintWriter;
 import java.util.Map;
-import org.eclipse.hudson.script.ScriptSupport;
-import org.eclipse.hudson.script.ScriptSupportDescriptor;
+import org.hudsonci.script.ScriptSupport;
+import org.hudsonci.script.ScriptSupportDescriptor;
 
 /**
  * BIRT Chart implementation for Hudson Graph Support
