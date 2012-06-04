@@ -1,6 +1,9 @@
 target
 work
 
+# Mac file
+.DS_Store
+
 # IntelliJ project files 
 *.iml
 *.iws
