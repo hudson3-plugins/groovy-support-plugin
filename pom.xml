@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.eclipse.hudson.plugins</groupId>
         <artifactId>hudson-plugin-parent</artifactId>
-        <version>3.0.0-M4</version>
+        <version>3.0.0</version>
     </parent>  
 
     <groupId>org.hudsonci.plugins</groupId>
@@ -33,4 +33,14 @@
             <version>1.7</version>
         </dependency>
     </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.hudson.tools</groupId>
+                <artifactId>maven-hpi-plugin</artifactId>
+                <version>3.0.3</version>
+            </plugin>                     
+        </plugins>
+    </build>
 </project>
